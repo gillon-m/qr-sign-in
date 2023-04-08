@@ -22,12 +22,12 @@ public class Classroom {
             joinColumns = @JoinColumn(name = "classroom_id"),
             inverseJoinColumns = @JoinColumn(name = "headTeacher_id"))
     private List<Teacher> headTeachers;
-//    @ManyToMany
-//    @JoinTable(
-//            name = "classroom_supportTeacher",
-//            joinColumns = @JoinColumn(name = "classroom_id"),
-//            inverseJoinColumns = @JoinColumn(name = "supportTeacher_id"))
-//    private List<Teacher> supportTeachers;
+    @ManyToMany
+    @JoinTable(
+            name = "classroom_supportTeacher",
+            joinColumns = @JoinColumn(name = "classroom_id"),
+            inverseJoinColumns = @JoinColumn(name = "supportTeacher_id"))
+    private List<Teacher> supportTeachers;
     @ManyToOne
     @JoinColumn(name = "organisation_id", referencedColumnName = "id")
     private Organisation organisation;

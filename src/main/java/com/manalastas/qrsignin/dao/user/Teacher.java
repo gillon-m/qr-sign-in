@@ -4,6 +4,8 @@ import com.manalastas.qrsignin.dao.classroom.Classroom;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.List;
+
 @Data
 @Entity
 public class Teacher {
@@ -12,6 +14,9 @@ public class Teacher {
     private Long id;
     @Embedded
     private Contact contact;
-//    @JoinColumn(name = "classroom_id", referencedColumnName = "id")
-//    private Classroom classroom;
+    @ManyToMany(mappedBy = "headTeachers")
+    private List<Classroom> headOfClassrooms;
+    @ManyToMany(mappedBy = "supportTeachers")
+    private List<Classroom> supportOfClassroom;
+
 }
