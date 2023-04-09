@@ -16,7 +16,6 @@ public class Student {
     private String lastName;
     @ManyToMany(mappedBy = "wards")
     private List<Guardian> guardians;
-    @ManyToOne
-    @JoinColumn(name = "classroom_id", referencedColumnName = "id")
+    @ManyToMany(mappedBy = "students")
     private Classroom classroom;
 }

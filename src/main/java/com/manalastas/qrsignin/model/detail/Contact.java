@@ -1,4 +1,4 @@
-package com.manalastas.qrsignin.dao.user;
+package com.manalastas.qrsignin.model.detail;
 
 import jakarta.persistence.Embeddable;
 import lombok.Data;

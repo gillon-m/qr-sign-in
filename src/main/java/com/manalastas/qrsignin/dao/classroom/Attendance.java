@@ -23,10 +23,10 @@ public class Attendance {
     @JoinColumn(name = "classroomDayRecord_id", referencedColumnName = "id")
     private ClassroomDayRecord classroomDayRecord;
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "signedInBy_id", referencedColumnName = "id")
+    @JoinColumn(name = "signedInBy_guardian_id", referencedColumnName = "id")
     private Guardian signedInBy;
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "signedOutBy_id", referencedColumnName = "id")
+    @JoinColumn(name = "signedOutBy_guardian_id", referencedColumnName = "id")
     private Guardian signedOutBy;
     private Date signInDateTime;
     private Date signOutDateTime;
