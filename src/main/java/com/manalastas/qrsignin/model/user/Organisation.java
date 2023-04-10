@@ -1,6 +1,6 @@
-package com.manalastas.qrsignin.dao.user;
+package com.manalastas.qrsignin.model.user;
 
-import com.manalastas.qrsignin.dao.classroom.Classroom;
+import com.manalastas.qrsignin.model.classroom.Classroom;
 import jakarta.persistence.*;
 import lombok.Data;
 

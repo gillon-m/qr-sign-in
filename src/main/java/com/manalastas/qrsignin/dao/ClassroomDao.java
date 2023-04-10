@@ -1,5 +1,6 @@
-package com.manalastas.qrsignin.dao.classroom;
+package com.manalastas.qrsignin.dao;
 
+import com.manalastas.qrsignin.model.classroom.Classroom;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
