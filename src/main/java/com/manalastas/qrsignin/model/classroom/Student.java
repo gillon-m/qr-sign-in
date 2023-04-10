@@ -17,5 +17,5 @@ public class Student {
     @ManyToMany(mappedBy = "wards")
     private List<Guardian> guardians;
     @ManyToMany(mappedBy = "students")
-    private Classroom classroom;
+    private List<Classroom> classroom;
 }

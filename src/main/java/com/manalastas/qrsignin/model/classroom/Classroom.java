@@ -14,7 +14,7 @@ public class Classroom {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
-    @ManyToMany(mappedBy = "classroom")
+    @ManyToMany
     @JoinTable(
             name = "classroom_student",
             joinColumns = @JoinColumn(name = "classroom_id"),
