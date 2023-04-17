@@ -4,7 +4,6 @@ import com.manalastas.qrsignin.model.classroom.Classroom;
 import com.manalastas.qrsignin.model.detail.Contact;
 import jakarta.persistence.*;
 import lombok.Data;
-
 import java.util.List;
 
 @Data

@@ -2,11 +2,14 @@ package com.manalastas.qrsignin.model.user;
 
 import com.manalastas.qrsignin.model.classroom.Classroom;
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
+import java.util.LinkedList;
 import java.util.List;
 
-@Data
+@Getter
+@Setter
 @Entity
 public class Organisation {
     @Id
@@ -14,5 +17,5 @@ public class Organisation {
     private Long id;
     private String name;
     @OneToMany(mappedBy = "organisation")
-    private List<Classroom> classrooms;
+    private List<Classroom> classrooms = new LinkedList<>();
 }

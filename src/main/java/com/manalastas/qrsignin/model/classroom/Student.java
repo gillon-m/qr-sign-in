@@ -4,6 +4,7 @@ import com.manalastas.qrsignin.model.user.Guardian;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.LinkedList;
 import java.util.List;
 
 @Entity
@@ -17,5 +18,5 @@ public class Student {
     @ManyToMany(mappedBy = "wards")
     private List<Guardian> guardians;
     @ManyToMany(mappedBy = "students")
-    private List<Classroom> classroom;
+    private List<Classroom> classrooms;
 }

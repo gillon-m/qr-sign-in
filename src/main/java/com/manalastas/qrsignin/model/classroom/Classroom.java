@@ -3,11 +3,14 @@ package com.manalastas.qrsignin.model.classroom;
 import com.manalastas.qrsignin.model.user.Organisation;
 import com.manalastas.qrsignin.model.user.Teacher;
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
+import java.util.LinkedList;
 import java.util.List;
 
-@Data
+@Getter
+@Setter
 @Entity
 public class Classroom {
     @Id
@@ -35,5 +38,4 @@ public class Classroom {
     @ManyToOne
     @JoinColumn(name = "organisation_id", referencedColumnName = "id")
     private Organisation organisation;
-//    private blob qrCode;
 }
